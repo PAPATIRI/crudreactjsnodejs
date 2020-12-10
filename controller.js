@@ -17,3 +17,19 @@ exports.tampilMhs = function (req, res) {
     }
   });
 };
+
+//menampilkan data berdasarkan id mhs
+exports.tampilMhsId = function (req, res) {
+  let id = req.params.id;
+  connection.query(
+    "SELECT * FROM mahasiswa WHERE id_mhs = ?",
+    [id],
+    function (error, rows, fields) {
+      if (error) {
+        connection.log(error);
+      } else {
+        response.ok(rows, res);
+      }
+    }
+  );
+};
