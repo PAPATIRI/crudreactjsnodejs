@@ -4,4 +4,6 @@ module.exports = function (app) {
 
   //mengembalikan index pada controller.js
   app.route("/").get(jsonku.index);
+
+  app.route("/tampil").get(jsonku.tampilMhs);
 };
