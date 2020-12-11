@@ -14,4 +14,6 @@ module.exports = function (app) {
   app.route("/editmahasiswa").put(jsonku.editMhs);
 
   app.route("/hapusmahasiswa").delete(jsonku.hapusMhs);
+
+  app.route("/tampilmatakuliah").get(jsonku.tampilmatakuliah);
 };
